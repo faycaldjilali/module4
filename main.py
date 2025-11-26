@@ -69,7 +69,7 @@ def get_all_records_for_date(target_date: str, max_records: int = 10000):
 
         if offset > 10000:
             break
-
+##
     return all_records
 
 def create_excel_simple(records: List[dict], target_date: str):
