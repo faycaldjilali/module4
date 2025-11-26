@@ -71,7 +71,7 @@
                                                name="selected_keywords" 
                                                value="{{ keyword }}" 
                                                id="keyword{{ loop.index }}"
-                                               {% if loop.index <= 10 %}checked{% endif %}>
+                                               checked|>
                                         <label class="form-check-label small" for="keyword{{ loop.index }}">
                                             {{ keyword }}
                                         </label>
@@ -126,59 +126,60 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
 
-                <!-- Results Section -->
-                <div class="results-section" id="resultsSection">
-                    <div class="card shadow-sm">
-                        <div class="card-header bg-success text-white">
-                            <h5 class="mb-0">📊 Results</h5>
-                        </div>
-                        <div class="card-body">
-                            <!-- Statistics -->
-                            <div class="row mb-4" id="summaryStats">
-                                <!-- Stats will be populated here -->
-                            </div>
-                            
-                            <!-- Results Table -->
-                            <div class="table-responsive">
-                                <table class="table table-bordered table-striped table-hover" id="resultsTable">
-                                    <thead class="table-dark">
-                                        <tr>
-                                            <th>Keywords</th>
-                                            <th>Acheteur</th>
-                                            <th>Objet</th>
-                                            <th>Lots</th>
-                                            <th>Visite</th>
-                                            <th>Département</th>
-                                            <th>Date Limite</th>
-                                            <th>PDF</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="resultsTableBody">
-                                        <!-- Results will be populated here -->
-                                    </tbody>
-                                </table>
-                            </div>
-                            
-                            <!-- Download Buttons -->
-                            <div class="row mt-4">
-                                <div class="col-md-6 mb-2">
-                                    <button class="btn btn-primary w-100 py-2" id="downloadFullBtn">
-                                        💾 Download Full Data (Excel)
-                                    </button>
-                                </div>
-                                <div class="col-md-6 mb-2">
-                                    <button class="btn btn-outline-primary w-100 py-2" id="downloadSummaryBtn">
-                                        📋 Download Summary (CSV)
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+    <!-- Results Section -->
+    <div class="results-section" id="resultsSection">
+        <div class="card shadow-sm">
+            <div class="card-header bg-success text-white">
+                <h5 class="mb-0">📊 Results</h5>
+            </div>
+            <div class="card-body">
+                <!-- Statistics -->
+                <div class="row mb-4" id="summaryStats">
+                    <!-- Stats will be populated here -->
+                </div>
+                
+                <!-- Results Table -->
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped table-hover" id="resultsTable">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Keywords</th>
+                                <th>Acheteur</th>
+                                <th>Objet</th>
+                                <th>Lots</th>
+                                <th>Visite</th>
+                                <th>Département</th>
+                                <th>Date Limite</th>
+                                <th>PDF</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultsTableBody">
+                            <!-- Results will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Download Buttons -->
+                <div class="row mt-4">
+                    <div class="col-md-6 mb-2">
+                        <button class="btn btn-primary w-100 py-2" id="downloadFullBtn">
+                            💾 Download Full Data (Excel)
+                        </button>
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <button class="btn btn-outline-primary w-100 py-2" id="downloadSummaryBtn">
+                            📋 Download Summary (CSV)
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
 
     <!-- Loading Modal -->
     <div class="modal fade" id="loadingModal" tabindex="-1" aria-hidden="true">
